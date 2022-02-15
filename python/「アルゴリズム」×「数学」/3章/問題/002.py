@@ -1,3 +1,5 @@
+#計算量O(N**0.5)
+
 def isprime(N):
 	LIMIT = int(N ** 0.5)
 	for i in range(2, LIMIT+1):
