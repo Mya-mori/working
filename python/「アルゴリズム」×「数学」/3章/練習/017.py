@@ -16,5 +16,3 @@ def LCM(A, B):
 
 N = int(input())
 A = list(map(int, input().split()))
-
-print(R)
