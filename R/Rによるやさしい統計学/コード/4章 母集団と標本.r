@@ -5,13 +5,13 @@
 var(身長)
 
 #ceiling 小数点以下を切り下げ
-サイコロ <- ceiling(runif(6, min=0, max=6))
+サイコロ <- ceiling(runif(6, min = 0, max = 6))
 table(サイコロ)
 
-サイコロ2 <- ceiling(runif(10000000, min=0, max=6))
+サイコロ2 <- ceiling(runif(10000000, min = 0, max = 6))
 table(サイコロ2)
 
-barplot(c(2/3, 1/3), names.arg=c("male", "female"))
+barplot(c(2/3, 1/3), names.arg = c("male", "female"))
 
 #正規分布 N(0, 1^2)
 curve(dnorm(x, mean=0, sd=1), from=-4, to=4)
