@@ -1,5 +1,5 @@
 #############################################################
-data <- read.csv("/Users/haratodaisuke/Library/Mobile Documents/com~apple~CloudDocs/working/R/データ解析のための統計モデリング入門/data/data3a.csv")
+data <- read.csv("/Users/haratodaisuke/Library/Mobile Documents/com~apple~CloudDocs/working/R/データ解析のための統計モデリング入門/data/data3a.csv") # nolint
 data
 #列ごとのデータを取得
 data$x
@@ -15,4 +15,8 @@ summary(data)
 #############################################################
 plot(data$x, data$y, pch = c(21, 19))
 legend("topleft", legend = c("C", "T"), pch = c(21, 19))
+#############################################################
+#GLM
+glm <- glm(formula = y ~ x, data = data, family = binomial)
+help(glm)
 #############################################################
