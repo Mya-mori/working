@@ -26,6 +26,7 @@ fit <- glm(
     data = data
 )
 fit
+#maximum log likelihood
 logLik(fit)
 #############################################################
 plot(data$x, data$y, pch = c(21, 19))
@@ -34,10 +35,20 @@ lines(xx, exp(1.29 + 0.0757 * xx), lwd = 2)
 yy <- predict(fit, newdata = data.frame(x = xx))
 lines(xx, yy, lwd = 2)
 #############################################################
-fit.f <- glm(
+fit_f <- glm(
     y ~ f,
     family = poisson,
     data = data
 )
 fit.f
+#maximum log likelihood
 logLik(fit.f)
+#############################################################
+fit_all <- glm(
+    y ~ x + f,
+    family = poisson,
+    data = data
+)
+fit_all
+#maximum log likelihood
+logLik(fit_all)
