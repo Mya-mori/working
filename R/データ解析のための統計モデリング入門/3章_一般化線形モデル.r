@@ -20,3 +20,24 @@ legend("topleft", legend = c("C", "T"), pch = c(21, 19))
 glm <- glm(formula = y ~ x, data = data, family = binomial)
 help(glm)
 #############################################################
+fit <- glm(
+    y ~ x,
+    family = poisson(link = "log"),
+    data = data
+)
+fit
+logLik(fit)
+#############################################################
+plot(data$x, data$y, pch = c(21, 19))
+xx <- seq(min(data$x), max(data$x), length = 100)
+lines(xx, exp(1.29 + 0.0757 * xx), lwd = 2)
+yy <- predict(fit, newdata = data.frame(x = xx))
+lines(xx, yy, lwd = 2)
+#############################################################
+fit.f <- glm(
+    y ~ f,
+    family = poisson,
+    data = data
+)
+fit.f
+logLik(fit.f)
