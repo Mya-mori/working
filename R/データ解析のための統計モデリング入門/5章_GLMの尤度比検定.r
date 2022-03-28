@@ -1,5 +1,5 @@
 #############################################################
-d <- read.csv("/Users/haratodaisuke/Library/Mobile Documents/com~apple~CloudDocs/working/R/データ解析のための統計モデリング入門/data/data3a.csv")
+d <- read.csv("../working/R/データ解析のための統計モデリング入門/data/data3a.csv")
 #############################################################
 #一定モデル
 fit1 <- glm(
@@ -39,7 +39,7 @@ get_pb <- function(d)
 }
 
 pb <- function(d, n_bootstrap)
-    {
+{
     replicate(n_bootstrap, get_pb(d))
 }
 

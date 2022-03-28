@@ -1,5 +1,5 @@
 #############################################################
-data <- read.csv("/Users/haratodaisuke/Library/Mobile Documents/com~apple~CloudDocs/working/R/データ解析のための統計モデリング入門/data/data3a.csv") # nolint
+data <- read.csv("../working/R/データ解析のための統計モデリング入門/data/data3a.csv")
 data
 #列ごとのデータを取得
 data$x
