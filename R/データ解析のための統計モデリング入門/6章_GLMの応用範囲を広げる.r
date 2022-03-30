@@ -12,3 +12,4 @@ logistic <- function(z) {
 z <- seq(-8, 8, 0.1)
 plot(z, logistic(z), lwd = 2)
 #############################################################
+glm(cbind(y, N - y) ~ x + f, data = d, family = binomial)
