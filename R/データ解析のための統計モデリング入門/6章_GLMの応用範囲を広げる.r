@@ -12,4 +12,14 @@ logistic <- function(z) {
 z <- seq(-8, 8, 0.1)
 plot(z, logistic(z), lwd = 2)
 #############################################################
-glm(cbind(y, N - y) ~ x + f, data = d, family = binomial)
+fit_xf <- glm(cbind(y, N - y) ~ x + f, data = d, family = binomial)
+library(MASS)
+stepAIC(fit_xf)
+#############################################################
+glm(cbind(y, N - y) ~ x * f, data = d, family = binomial)
+glm(y ~ x, offset = x, data = d, family = poisson)
+#############################################################
+y <- seq(-5, 5, 0.1)
+plot(y, dnorm(y, mean = 0, sd = 1), type = "l")
+#area
+pnorm(1.8, mean = 0, sd = 1) - pnorm(1.2, mean = 0, sd = 1)
