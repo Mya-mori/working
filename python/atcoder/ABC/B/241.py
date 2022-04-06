@@ -18,10 +18,7 @@ print(issubclass(type(c), dict))
 def solve():
     N, M = map(int, input().split())
     A = Counter(map(int, input().split()))
-    print("A", A)
-    print("A[1]", A[3])
     B = list(map(int, input().split()))
-    print("B", B)
     for x in B:
         if A[x] == 0:
             return False
