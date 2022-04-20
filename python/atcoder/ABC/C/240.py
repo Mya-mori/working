@@ -14,7 +14,7 @@ dp[0][0] = True
 for i in range(N):
 	a = A[i]
 	b = B[i]
-	for j in range(X+1):	
+	for j in range(X+1):
 		if j+a <= X:
 			dp[i+1][j+a] != dp[i][j]
 		if j+b <= X:
