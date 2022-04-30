@@ -1,4 +1,7 @@
 {
 	"git.ignoreLimitWarning": true,
-	"jupyter.jupyterServerType": "remote"
+	"jupyter.jupyterServerType": "remote",
+	"files.associations": {
+		"vector": "cpp"
+	}
 }
