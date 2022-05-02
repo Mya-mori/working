@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-const int N = 0;
+const int N = 8;
 const vector<int> a = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
 int binary_search(int key) {
