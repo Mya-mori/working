@@ -9,6 +9,9 @@ def sort(array):
     N = len(array)
     L = []
     R = []
+    #randrange(start, stop, step)
+    #start:開始点 stop:終了点 step:ステップ
+    #randrange(2) → 0,1を返す
     X = random.randrange(N)
 
     for i in range(N):
