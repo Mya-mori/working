@@ -14,9 +14,10 @@ for i in range(N):
     s_list.append(s)
     t_list.append(t)
 
+# 名前のリスト
 for i in range(N):
     namelist = []
-
+    #i != k である名前リストを作成
     for k in range(N):
         if i != k:
             namelist.append(s_list[k])
