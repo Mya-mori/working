@@ -1,4 +1,5 @@
 def solve():
+    #シミュレーション
     def calc(p, q, r):
         t = 0 #時間
         dist = 0 #距離
