@@ -1,10 +1,15 @@
 
+      
 
-  create  table "dbt_training"."public"."employee_names__dbt_tmp"
+  create  table "dbt_training"."public"."employee_names"
   as (
-    select
+    
+select
 	"employee_id",
 	concat("first_name", ' ', "last_name") as full_name
 from
 	"dbt_training"."raw"."employees"
+
+
   );
+  
