@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: hoge
+    columns:
+      - name: fuga
+        tests:
+      - unique
+      - not_null
+      - accepted_values:
+        values: ['hoge', 'fuga', 'piyo']
+      - relationships:
+        to: ref('other_model_name')
+        field: id
