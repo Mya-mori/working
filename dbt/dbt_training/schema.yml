@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: hoge
+    description: '{{ doc("table_hoge") }}'

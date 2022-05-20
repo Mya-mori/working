@@ -1,0 +1,10 @@
+
+    
+    create table "dbt_training"."public"."jobs_jp" ("job_id" integer," job_titile_jp" text)
+  ;
+    -- dbt seed --
+    
+          insert into "dbt_training"."public"."jobs_jp" ("job_id", " job_titile_jp") values
+          (%s,%s),(%s,%s)
+      
+  

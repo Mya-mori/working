@@ -5,3 +5,7 @@ select
 from
 	"dbt_training"."raw"."employees"
 
+
+
+	where "employee_id" not in (SELECT "employee_id" FROM "dbt_training"."public"."employee_names")
+
