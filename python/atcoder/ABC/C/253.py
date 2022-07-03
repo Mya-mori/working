@@ -29,7 +29,7 @@ MinQue = []
 
 for i in range(Q):
     query = list(map(int, input().split()))
-
+    print(MinQue)
     #クエリ1 xに1を追加
     if query[0] == 1:
         #例) [1, 3] 3をxに格納
@@ -59,7 +59,7 @@ for i in range(Q):
             SMin = heapq.heappop(MinQue)
 
         #最大値を取得する
-        SMax = heapq.headpop(MaxQue)
+        SMax = heapq.heappop(MaxQue)
         SMax *= -1
         #SMaxが0個である場合
         while Count[SMax]==0:
